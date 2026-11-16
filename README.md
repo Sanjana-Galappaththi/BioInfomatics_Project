@@ -61,10 +61,17 @@ After filtering, `r n_tested` genes with valid adjusted p-values were tested for
 ## Expression distribution
 ![Distribution of normalised expression across samples](results/figures/01_boxplot_expression.png)
 
-*Interpretation:* WRITE HERE whether the distributions look similar across the eight samples and whether any sample appears unusual.
+The boxplot illustrates the distribution of normalized gene expression values (VST) across all eight sequenced samples. The median expression levels and overall data distributions are consistent and well-aligned across every sample. This indicates that the normalization process was successful, removing technical variations and making the samples directly comparable for downstream differential expression analysis
 
 ## PCA
 ![PCA of samples](results/figures/02_pca.png)
+
+The Principal Component Analysis (PCA) plot demonstrates clear grouping of samples based on Dexamethasone treatment.
+
+    PC1 (explaining 46% of the variance) distinctly separates the treated (trt) samples on the right from the untreated (untrt) samples on the left. This indicates that the Dexamethasone treatment is the primary source of variation in gene expression.
+
+    PC2 (explaining 24% of the variance) captures variation across different cell lines.
+    Overall, the tight clustering within treatment groups confirms high reproducibility and a strong biological response to the treatment.
 
 *Interpretation:* The first two principal components explain `r round(100*attr(pca, "percentVar")[1])`% and `r round(100*attr(pca, "percentVar")[2])`% ... (see figure). WRITE HERE whether treated and untreated samples separate, and whether donors (shapes) cluster.
 
@@ -77,20 +84,20 @@ DESeq2 identified **`r n_sig`** significantly differentially expressed genes, of
 knitr::kable(head(sig[, c("gene_id", "symbol", "baseMean", "log2FoldChange", "padj")], 10),
              digits = 3, caption = "Ten most significant genes")
 ```
+The sample-to-sample distance heatmap displays the Euclidean distances calculated from the transformed expression data. Lower distances (darker blue) indicate high similarity between samples. The hierarchical clustering clearly divides the samples into two main clusters corresponding to the treatment condition (trt vs untrt). Within each treatment group, samples cluster closely together, further verifying strong consistency and minimal batch or technical noise among biological replicates.
+
 
 ## Volcano plot
 ![Volcano plot](results/figures/04_volcano_plot.png)
 
-*Interpretation:* WRITE HERE. Genes to the right are upregulated, genes to the left are downregulated; higher points are more statistically significant.
+*Interpretation:* The volcano plot summarizes the overall differential gene expression between treated and untreated conditions, plotting $-\log_{10}$ adjusted p-values against $\log_{2}$ fold changes.Genes significantly Upregulated by the treatment are highlighted in red on the right.Genes significantly Downregulated are highlighted in blue on the left.Non-significant genes remain in grey around the center.The large number of genes passing the significance thresholds indicates that Dexamethasone induces a substantial transcriptional response in the airway cells.
 
-## MA plot
 ![MA plot](results/figures/05_ma_plot.png)
 
 ## Heatmap
 ![Top 30 genes](results/figures/06_heatmap_top30.png)
 
-*Interpretation:* WRITE HERE whether treated and untreated samples cluster separately and whether the pattern is consistent across donors.
-
+*Interpretation:* The heatmap displays the expression patterns of the top 30 most significantly differentially expressed genes across all samples. Each row represents a gene, and each column represents a sample. The color scale ranges from blue (low expression) to red (high expression). The hierarchical clustering tree clearly groups the samples into treated and untreated cohorts, showing distinct patterns where specific gene clusters are consistently upregulated or downregulated following Dexamethasone administration
 # Discussion
 
 WRITE HERE (about 300–500 words): state whether you reject H0; discuss the top genes in the table above and what is known about them in glucocorticoid response (check the gene functions and cite sources, e.g. Himes et al., 2014, who reported CRISPLD2 as a glucocorticoid-responsive gene); compare with the literature; explain what the PCA and heatmap show about donor effects.
