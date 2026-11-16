@@ -59,7 +59,7 @@ The analysis was run in R using `airway`, `DESeq2`, `ggplot2`, `dplyr` and `phea
 After filtering, `r n_tested` genes with valid adjusted p-values were tested for differential expression.
 
 ## Expression distribution
-![Distribution of normalised expression across samples](C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/01_boxplot_expression.png)
+![Distribution of normalised expression across samples] (C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/01_boxplot_expression.png)
 
 *Interpretation:* WRITE HERE whether the distributions look similar across the eight samples and whether any sample appears unusual.
 
