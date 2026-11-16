@@ -94,6 +94,7 @@ The sample-to-sample distance heatmap displays the Euclidean distances calculate
 
 ![MA plot](results/figures/05_ma_plot.png)
 
+
 ## Heatmap
 ![Top 30 genes](results/figures/06_heatmap_top30.png)
 
