@@ -64,7 +64,7 @@ After filtering, `r n_tested` genes with valid adjusted p-values were tested for
 *Interpretation:* WRITE HERE whether the distributions look similar across the eight samples and whether any sample appears unusual.
 
 ## PCA
-![PCA of samples](C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/02_pca.png)
+![PCA of samples](results/figures/02_pca.png)
 
 *Interpretation:* The first two principal components explain `r round(100*attr(pca, "percentVar")[1])`% and `r round(100*attr(pca, "percentVar")[2])`% ... (see figure). WRITE HERE whether treated and untreated samples separate, and whether donors (shapes) cluster.
 
