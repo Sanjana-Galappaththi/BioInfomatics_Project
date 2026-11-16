@@ -59,16 +59,16 @@ The analysis was run in R using `airway`, `DESeq2`, `ggplot2`, `dplyr` and `phea
 After filtering, `r n_tested` genes with valid adjusted p-values were tested for differential expression.
 
 ## Expression distribution
-![Distribution of normalised expression across samples](results/figures/01_boxplot_expression.png)
+![Distribution of normalised expression across samples](C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/01_boxplot_expression.png)
 
 *Interpretation:* WRITE HERE whether the distributions look similar across the eight samples and whether any sample appears unusual.
 
 ## PCA
-![PCA of samples](results/figures/02_pca.png)
+![PCA of samples](C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/02_pca.png)
 
 *Interpretation:* The first two principal components explain `r round(100*attr(pca, "percentVar")[1])`% and `r round(100*attr(pca, "percentVar")[2])`% ... (see figure). WRITE HERE whether treated and untreated samples separate, and whether donors (shapes) cluster.
 
-![Sample-to-sample distances](results/figures/03_sample_distance_heatmap.png)
+![Sample-to-sample distances](C:/Users/User/Desktop/4.1sem/BioInfomatics/ICA03_project/ICA03_Bioinformatics_Dexamethasone/results/figures/03_sample_distance_heatmap.png)
 
 ## Differential expression
 DESeq2 identified **`r n_sig`** significantly differentially expressed genes, of which **`r n_up`** were upregulated and **`r n_down`** were downregulated after dexamethasone treatment.
