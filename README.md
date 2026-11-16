@@ -97,7 +97,7 @@ The sample-to-sample distance heatmap displays the Euclidean distances calculate
 ## Heatmap
 ![Top 30 genes](results/figures/06_heatmap_top30.png)
 
-*Interpretation:* The heatmap displays the expression patterns of the top 30 most significantly differentially expressed genes across all samples. Each row represents a gene, and each column represents a sample. The color scale ranges from blue (low expression) to red (high expression). The hierarchical clustering tree clearly groups the samples into treated and untreated cohorts, showing distinct patterns where specific gene clusters are consistently upregulated or downregulated following Dexamethasone administration
+*Interpretation:*The heatmap displays the expression patterns of the top 30 most significantly differentially expressed genes across all eight samples. Each row represents a gene, and each column represents a sample, with color intensities reflecting relative expression levels (ranging from blue for low expression to red for high expression). The hierarchical clustering tree at the top clearly divides the samples into two main groups corresponding to the treatment condition (untrt vs trt). This distinct grouping demonstrates that Dexamethasone treatment induces a clear and consistent shift in gene expression, where specific subsets of genes are systematically upregulated while others are downregulated
 # Discussion
 
 WRITE HERE (about 300–500 words): state whether you reject H0; discuss the top genes in the table above and what is known about them in glucocorticoid response (check the gene functions and cite sources, e.g. Himes et al., 2014, who reported CRISPLD2 as a glucocorticoid-responsive gene); compare with the literature; explain what the PCA and heatmap show about donor effects.
